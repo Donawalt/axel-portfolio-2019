@@ -1,53 +1,34 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from "react"
-import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
+import Header from "./Header"
+import Footer from "./Footer"
+import Helmet from 'react-Helmet'
 
-import Header from "./header"
-import "./layout.css"
+import '../style/main.scss'
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
-        </div>
-      </>
-    )}
-  />
-)
+class Layout extends React.Component{
+  constructor(props){
+    super(props);
+    var html = document.querySelector('html');
+    html.className ='';
+    html.classList.add(this.props.type);
+    html.classList.add(this.props.menuColor);
+  }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  render () {
+    return (
+      <div>
+      <Helmet>
+      <meta name="description" content=""></meta>
+      <meta name="language" content="fr"></meta>
+      </Helmet>
+      <Header/>
+      <section className="app">
+        {this.props.children}
+      </section>
+      <Footer/>
+      </div>
+    )
+  }
 }
 
 export default Layout

@@ -1,0 +1,35 @@
+.menu-page{
+  background-color: black;
+  height: 100vh;
+  color: white;
+  display: flex;
+  div{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1{
+      font-family: Raleway, sans-serif;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 150px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    ul{
+      list-style: none;
+      li{
+        a{
+          text-decoration: none;
+          color: white;
+          font-family: Raleway, sans-serif;
+          font-style: normal;
+          font-weight: 900;
+          font-size: 80px;
+          text-align: center;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

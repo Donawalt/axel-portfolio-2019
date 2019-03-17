@@ -1,0 +1,92 @@
+html,div,section,h1,h2,h3,span,body{
+  margin: 0;
+  padding: 0;
+};
+
+header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  >div{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 31px;
+    font-size: 20px;
+  }
+  a{
+    text-decoration: none;
+    .burger-menu{
+      transform: translate(-50%,-50%);
+      height: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .burger-item{
+        width: 30px;
+        height: 1px;
+      }
+    }
+  }
+}
+.white{
+  header{
+    a,a > .logoSite {
+      color: white;
+    }
+    .burger-item{
+      border: 0px solid #FFFFFF;
+      background-color: white;
+    }
+  }
+  footer{
+    a{
+      color: white;
+    }
+  }
+}
+.black{
+  header{
+    a,a > .logoSite {
+      color: black;
+    }
+    .burger-item{
+      border: 0px solid black;
+      background-color: black;
+    }
+  }
+  footer{
+    a{
+      color: black;
+    }
+  }
+}
+
+footer {
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  a{
+    text-decoration: none;
+    font-family: sans-serif;
+  }
+  .all-div{
+      transform: translate(-50%,-50%);
+  }
+}
+/** IMPORT **/
+@import "partials/404",
+        "partials/blog",
+        "partials/index",
+        "partials/portfolio",
+        "partials/portfolioArticle",
+        "partials/blogArticle",
+        "partials/menu";

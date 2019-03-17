@@ -9,12 +9,16 @@ import Layout from "../components/Layout"
 import { graphql } from 'gatsby'
 
 
-class IndexPage extends React.Component{
+class PortfolioPage extends React.Component{
 render () {
   const siteTitle = get(this, 'props.data.site.siteMetadata.title')
   const posts = get(this, 'props.data.allMarkdownRemark.edges')
   return (
-  <Layout type="IndexPage" menuColor="white">
+  <Layout type="blogPage" menuColor="black">
+  <section className="header-blog">
+    <h1>Portfolio</h1>
+    <h3>by Axel Dos Santos & co ...</h3>
+  </section>
   <main>
   {posts.map(({ node }) => {
       const title = get(node, 'frontmatter.title') || node.fields.slug
@@ -26,9 +30,6 @@ render () {
                     {title}
                 </h1>
             </Link>
-            <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-              <h2>{node.frontmatter.type}</h2>
-            </Link>
             </div>
         </section>
       )
@@ -38,17 +39,16 @@ render () {
 )
 }
 }
-export default IndexPage
+export default PortfolioPage
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query PortfolioQuery {
     site {
       siteMetadata {
         title
       }
     }
     allMarkdownRemark (
-      limit: 5
       sort: { order: DESC, fields: [frontmatter___date] },
       filter: { frontmatter: { templateKey: { eq: "portfolio-post" } }}
     ){
