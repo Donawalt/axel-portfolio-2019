@@ -1,5 +1,6 @@
 import React from "react"
 import Link from 'gatsby-plugin-transition-link'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
@@ -16,6 +17,9 @@ render () {
   const posts = get(this, 'props.data.allMarkdownRemark.edges')
   return (
   <Layout type="blogPage" menuColor="black">
+  <Helmet>
+    <title>{siteTitle} || BLOG</title>
+  </Helmet>
   <section className="header-blog">
     <h1>Blog</h1>
     <h3>by Axel Dos Santos & co ...</h3>
@@ -26,14 +30,14 @@ render () {
       return (
         <div key={node.fields.slug} className="fiche">
           <div className="info">
-            <Link style={{ boxShadow: 'none' }} to={node.fields.slug} className="LinkArticle">
+            <AniLink paintDrip color="white" style={{ boxShadow: 'none' }} to={node.fields.slug} className="LinkArticle">
                 <h1 className="titreArticle">
                     {title}
                 </h1>
-            </Link>
-            <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+            </AniLink>
+            <AniLink paintDrip color="white" style={{ boxShadow: 'none' }} to={node.fields.slug}>
               <h2>{node.frontmatter.type}</h2>
-            </Link>
+            </AniLink>
             </div>
             <div className="background">
               <Img sizes={node.frontmatter.featuredImage.childImageSharp.sizes} />

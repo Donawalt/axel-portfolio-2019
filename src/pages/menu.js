@@ -1,5 +1,8 @@
 import React from "react"
-import Link from "gatsby-plugin-transition-link"
+import Link from 'gatsby-plugin-transition-link'
+import TransitionLink from 'gatsby-plugin-transition-link'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+
 
 import "../style/main.scss"
 
@@ -10,9 +13,9 @@ const Menu = () => (
     </div>
     <div>
       <ul>
-        <li><Link to="/portfolio">PORTFOLIO</Link></li>
-        <li><Link to="/blog">BLOG</Link></li>
-        <li><Link to="/about">ABOUT</Link></li>
+        <li><AniLink paintDrip to="/portfolio" color="white">PORTFOLIO</AniLink></li>
+        <li><AniLink paintDrip to="/blog" color="white">BLOG</AniLink></li>
+        <li><AniLink paintDrip to="/about" color="white">ABOUT</AniLink></li>
       </ul>
     </div>
   </section>

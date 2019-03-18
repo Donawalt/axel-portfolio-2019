@@ -1,5 +1,7 @@
 import React from "react"
 import Link from 'gatsby-plugin-transition-link'
+import TransitionLink from 'gatsby-plugin-transition-link'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import Img from "gatsby-image"
@@ -16,24 +18,27 @@ render () {
   const posts = get(this, 'props.data.allMarkdownRemark.edges')
   return (
   <Layout type="IndexPage" menuColor="white">
+    <Helmet>
+      <title>{siteTitle} || Portfolio</title>
+    </Helmet>
   <main>
   {posts.map(({ node }) => {
       const title = get(node, 'frontmatter.title') || node.fields.slug
       return (
         <section key={node.fields.slug} className="fiche">
           <div className="info">
-            <Link style={{ boxShadow: 'none' }} to={node.fields.slug} className="LinkArticle">
+            <AniLink cover direction="down" bg="white" to={node.fields.slug} className="LinkArticle">
                 <h1 className="titreArticle">
                     {title}
                 </h1>
-            </Link>
-            <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+            </AniLink>
+            <AniLink cover direction="down" bg="white" to={node.fields.slug}>
               <h2>{node.frontmatter.type}</h2>
-            </Link>
+            </AniLink>
             </div>
-            <Link style={{ boxShadow: 'none' }} to={node.fields.slug} className="linkProject">
+            <AniLink cover direction="left"  bg="white" to={node.fields.slug} className="linkProject">
               <p>Voir le projet</p>
-            </Link>
+            </AniLink>
             <div className="background">
               <Img sizes={node.frontmatter.featuredImage.childImageSharp.sizes} />
             </div>
