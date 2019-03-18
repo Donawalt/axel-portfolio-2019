@@ -1,23 +1,32 @@
 import React from "react"
-import Link from 'gatsby-link'
+import Link from 'gatsby-plugin-transition-link'
+import TransitionLink from 'gatsby-plugin-transition-link'
 
 class Header extends React.Component {
   render(){
     return (
       <header>
         <div className="logo">
-        <Link to="/">
+        <TransitionLink
+          to="/"
+          exit={{
+                  length: 1
+                }}
+          entry={{
+                  delay: 0.6
+                }}
+          >
           <p className="logoSite">AXEL DOS SANTOS //<br/> PORTFOLIO</p>
-        </Link>
+        </TransitionLink>
         </div>
         <div className="burger">
-        <Link to="/menu">
+        <TransitionLink to="/menu">
           <div className="burger-menu">
             <span className="burger-item item1"></span>
             <span className="burger-item item2"></span>
             <span className="burger-item item3"></span>
           </div>
-        </Link>
+        </TransitionLink>
         </div>
       </header>
     )

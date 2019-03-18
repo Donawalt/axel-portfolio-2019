@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
+import Link from 'gatsby-plugin-transition-link'
 import get from 'lodash/get'
 
 import Img from 'gatsby-image'
