@@ -2,10 +2,12 @@ import React from "react"
 import Link from 'gatsby-plugin-transition-link'
 import TransitionLink from 'gatsby-plugin-transition-link'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { TransitionPortal } from "gatsby-plugin-transition-link";
 
 class Header extends React.Component {
   render(){
     return (
+      <TransitionPortal>
       <header>
         <div className="logo">
         <AniLink cover direction="right" to="/" bg="black">
@@ -22,6 +24,7 @@ class Header extends React.Component {
         </AniLink>
         </div>
       </header>
+      </TransitionPortal>
     )
   }
 }
