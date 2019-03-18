@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 
 import { render } from "react-dom";
 import Layout from "../components/Layout"
+import Img from "gatsby-image"
 
 import { graphql } from 'gatsby'
 
@@ -33,6 +34,9 @@ render () {
             <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
               <h2>{node.frontmatter.type}</h2>
             </Link>
+            </div>
+            <div className="background">
+              <Img sizes={node.frontmatter.featuredImage.childImageSharp.sizes} />
             </div>
         </div>
       )
@@ -65,6 +69,13 @@ export const pageQuery = graphql`
             date(formatString: "DD MMMM, YYYY")
             title
             type
+            featuredImage {
+                childImageSharp{
+                    sizes(maxWidth: 40000) {
+                        ...GatsbyImageSharpSizes
+                    }
+                }
+            }
           }
         }
       }

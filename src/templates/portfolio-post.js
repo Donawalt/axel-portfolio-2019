@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Link from 'gatsby-link'
+
 import get from 'lodash/get'
 
 import Img from 'gatsby-image'
@@ -13,18 +13,20 @@ class PortfolioPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-    const { previous, next } = this.props.pageContext
 
     return (
       <Layout type="portfolioArticle" menuColor="white">
       <div className="PortfolioPost" id="PortfolioPost">
         <Helmet>
-          <title>{post.frontmatter.title} || Axel Dos Santos</title>
+          <title>{post.frontmatter.title} || {siteTitle}</title>
         </Helmet>
         <div className="headerArticle">
             <div className="titleArticle">
               <h1>{post.frontmatter.title}</h1>
               <h2>{post.frontmatter.type}</h2>
+            </div>
+            <div className="background">
+              <Img sizes={post.frontmatter.featuredImage.childImageSharp.sizes} />
             </div>
         </div>
         <section className="content">
@@ -76,6 +78,13 @@ export const pageQuery = graphql`
         credit
         type
         description
+        featuredImage {
+            childImageSharp{
+                sizes(maxWidth: 40000) {
+                    ...GatsbyImageSharpSizes
+                }
+            }
+        }
       }
     }
   }

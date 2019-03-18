@@ -2,16 +2,18 @@
   background-color: black;
   color: white;
   .headerArticle{
-    background-color: crimson;
+    position: relative;
     height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
       .titleArticle{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        overflow: hidden;
         h1{
           font-family: Raleway, sans-serif;
           font-style: normal;
@@ -19,9 +21,6 @@
           font-size: 100px;
           text-align: center;
           text-transform: uppercase;
-        }
-        h1::after{
-          content: '//';
         }
         h2{
           font-family: Raleway, sans-serif;
@@ -33,6 +32,14 @@
           color: #D3D3D3;
           height: 4em;
         }
+      }
+      .background{
+        position: absolute;
+        z-index: -10;
+        top: 0;
+        height: 80vh;
+        width: 100%;
+        opacity: 0.7;
       }
   }
   .content{

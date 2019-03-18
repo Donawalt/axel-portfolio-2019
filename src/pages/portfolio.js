@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 
 import { render } from "react-dom";
 import Layout from "../components/Layout"
+import Img from "gatsby-image"
 
 import { graphql } from 'gatsby'
 
@@ -14,7 +15,7 @@ render () {
   const siteTitle = get(this, 'props.data.site.siteMetadata.title')
   const posts = get(this, 'props.data.allMarkdownRemark.edges')
   return (
-  <Layout type="blogPage" menuColor="black">
+  <Layout type="PortfolioPage" menuColor="black">
   <section className="header-blog">
     <h1>Portfolio</h1>
     <h3>by Axel Dos Santos & co ...</h3>
@@ -30,6 +31,9 @@ render () {
                     {title}
                 </h1>
             </Link>
+            </div>
+            <div className="background">
+              <Img sizes={node.frontmatter.featuredImage.childImageSharp.sizes} />
             </div>
         </section>
       )
@@ -62,6 +66,13 @@ export const pageQuery = graphql`
             date(formatString: "DD MMMM, YYYY")
             title
             type
+            featuredImage {
+                childImageSharp{
+                    sizes(maxWidth: 40000) {
+                        ...GatsbyImageSharpSizes
+                    }
+                }
+            }
           }
         }
       }

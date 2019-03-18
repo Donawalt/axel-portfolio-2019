@@ -2,6 +2,7 @@ import React from "react"
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import Img from "gatsby-image"
 
 import { render } from "react-dom";
 import Layout from "../components/Layout"
@@ -29,6 +30,12 @@ render () {
             <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
               <h2>{node.frontmatter.type}</h2>
             </Link>
+            </div>
+            <Link style={{ boxShadow: 'none' }} to={node.fields.slug} className="linkProject">
+              <p>Voir le projet</p>
+            </Link>
+            <div className="background">
+              <Img sizes={node.frontmatter.featuredImage.childImageSharp.sizes} />
             </div>
         </section>
       )
@@ -62,6 +69,13 @@ export const pageQuery = graphql`
             date(formatString: "DD MMMM, YYYY")
             title
             type
+            featuredImage {
+                childImageSharp{
+                    sizes(maxWidth: 40000) {
+                        ...GatsbyImageSharpSizes
+                    }
+                }
+            }
           }
         }
       }

@@ -7,6 +7,8 @@ description: The Coffee Taster’s Flavor Wheel, the official resource used by c
 tags:
   - flavor
   - tasting
+featuredImage: './featured-image.jpg'
+profileImage: './profile.jpg'
 ---
 Quaterque potest calamis erat minimo poma memoro
 ================================================

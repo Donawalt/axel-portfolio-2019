@@ -1,18 +1,20 @@
 ---
 templateKey: blog-post
-title: Flavor Wheel
+title: Netflix & Chill
 author: Axel Dos Santos
 date: 2016-12-17T15:04:10.000Z
-description: The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.
+description: Un jour d'été je mangeais du chocolat
 tags:
-  - flavor
-  - tasting
+  - film  
+featuredImage: './featured-image.jpg'
+profileImage: './profile.jpg'
 ---
+
 Quaterque potest calamis erat minimo poma memoro
-================================================
+===
 
 Socia sub terras Sibyllae velles
---------------------------------
+---
 
 Lorem markdownum est tenerum pater ter undas commenta et zonae phoenica: Thisbe
 smaragdis praelate secutae advena hic! Gladii ille lata adesset, in victima
@@ -25,7 +27,7 @@ ecce obstabat ruris aevum.
 > rapi [utque si](http://flamine-manabant.org/innutrix) Dictys maius.
 
 Propinquas corpus pharetram mihi orbae ad Naxoque
--------------------------------------------------
+---
 
 Silvaque inmittitur inrita Achaidas fecunda, tetigisse in nocte
 [vertice](http://etextrema.net/albaarva), ignibus. Postquam humo, qualis pleno
@@ -35,7 +37,7 @@ involvitur futura infamis tollens. Barbara Danaen dives te fervida vindex at
 ferro __vi nec__ gemit.
 
 Sub non lutea quod nec haud
----------------------------
+---
 
 Fons et nutu. Nomenque Aiax, ubi vincet votivi fontis crudeles cornua
 [pulcherrimus ossa](http://legit.io/distantia), illum! Nupta hac ultoris,
@@ -44,7 +46,7 @@ Ulla umente, nam utque __crescentem aut__, succiduo aperto iactum, fidis regnis
 ara.
 
 Verba esse Icare insania erat morte
------------------------------------
+---
 
 Terras quotiens fessam, pulsa ad isto visa inplent totusque faciem. Nec est
 ferarum umbrae! Latens *stimuloque posuere* erit, nec, os Iuppiter orbus;
@@ -58,8 +60,8 @@ elidite simus, illo Chariclo munera; proxima.
 > harenas opposita corpora sanguine laetissimus felicem imbrem, corpus
 > __aeoliam__ est sit tactu pressus forti relevat?
 
-Ascanii cantusque temptant posse
---------------------------------
+Ascanii cantusque temptant posse![nnnnnn]()
+---
 
 Coniuge ac, modo. Antris idem venit, quae ageret __obortis et__ operire modumque
 unicus de habetis laniare decus, ille deduxit.
@@ -73,4 +75,10 @@ retro __Alcithoe__, prolis si forma __tentoria praemia__.
 [Petitis vocum qui](http://illavidet.net/vocantcum) tanta __iactura__ de taurus
 *et ire* oculosque, Venus. Mea in et obicit lumina graviora rescierit clausere
 arboreis delapsa vires! Haec decidere protinus alis magni ipse dentes pavit
-venas esse humo, sibi!
+venas esse humo, si
+
+On m'as toujours dit que c'était important de se faire confiance .
+
+```
+<?php > jxhbqsjkxbm*<?>
+```

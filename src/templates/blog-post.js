@@ -24,7 +24,9 @@ class BlogPostTemplate extends React.Component {
         <section className="header-section">
             <h1>{post.frontmatter.title}</h1>
             <div className="info">
-              <div className="avatar"></div>
+              <div className="avatar">
+                <Img sizes={post.frontmatter.profileImage.childImageSharp.sizes} />
+              </div>
               <div className="publi">
                 <p>{post.frontmatter.author}</p>
                 <p>
@@ -34,6 +36,7 @@ class BlogPostTemplate extends React.Component {
             </div>
         </section>
         <section className="featuredImg-section">
+          <Img sizes={post.frontmatter.featuredImage.childImageSharp.sizes} />
         </section>
         <section id="aPost" dangerouslySetInnerHTML={{ __html: post.html }} ></section>
         </div>
@@ -59,6 +62,20 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         author
+        featuredImage {
+            childImageSharp{
+                sizes(maxWidth: 40000) {
+                    ...GatsbyImageSharpSizes
+                }
+            }
+        }
+        profileImage {
+            childImageSharp{
+                sizes(maxWidth: 40000) {
+                    ...GatsbyImageSharpSizes
+                }
+            }
+        }
       }
     }
   }

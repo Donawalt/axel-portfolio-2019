@@ -1,14 +1,17 @@
 .IndexPage{
+  background-color: black;
   main{
     .fiche {
+      position: absolute;
       height: 100vh;
       width: 100%;
-      background-color: black;
       color: white;
       display: flex;
       align-items: center;
+      position: relative;
+      overflow: hidden;
       .info{
-        width: 50%;
+        width: 100%;
         min-height: 50%;
         display: flex;
         justify-content: space-around;
@@ -24,9 +27,6 @@
             text-align: center;
             text-transform: uppercase;
           }
-          .titreArticle::after{
-            content: '//';
-          }
           h2{
             font-family: Raleway, sans-serif;
             font-style: normal;
@@ -38,6 +38,24 @@
             height: 4em;
           }
         }
+      }
+      .linkProject{
+            position: absolute;
+            right: 10px;
+            transform: rotate(90deg);
+            color: white;
+            text-transform: uppercase;
+            font-family: sans-serif;
+      }
+      .background{
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        z-index: -10;
+        opacity: 0.7;
       }
     }
   }

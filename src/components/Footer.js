@@ -6,8 +6,8 @@ class Header extends React.Component {
     return (
       <footer>
         <div class="lang-div">
-          <ul class="lang-list">
-            <li class="lang lang-en active">EN</li>
+          <ul class="lang-list" style={{display: 'none'}}>
+            <li class="lang lang-en active" >EN</li>
             <li class="lang lang-fr">FR</li>
           </ul>
         </div>

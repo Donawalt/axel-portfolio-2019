@@ -27,6 +27,7 @@
           width: 100px;
           background-color: grey;
           border-radius: 80px;
+          overflow: hidden;
         }
         .publi{
           font-family: Segoe UI;
@@ -45,6 +46,10 @@
     .featuredImg-section{
       height: 40vh;
       background-color: gray;
+      overflow: hidden;
+      >div{
+        transform: translate(0%, -25%);
+      }
     }
     #aPost{
       width: 80%;
