@@ -1,7 +1,7 @@
 import React from "react"
-import Header from "./Header"
-import Footer from "./Footer"
-import Helmet from 'react-Helmet'
+import Header from "./header"
+import Footer from "./footer"
+import Helmet from 'react-helmet'
 
 import '../style/main.scss'
 
