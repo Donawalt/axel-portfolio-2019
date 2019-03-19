@@ -5,7 +5,7 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
 import { render } from "react-dom";
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 import Img from "gatsby-image"
 
 import { graphql } from 'gatsby'

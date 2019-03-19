@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 import profile from '../images/profileAxel.jpg'
 
 class AboutPage extends React.Component {
@@ -21,7 +21,7 @@ class AboutPage extends React.Component {
             <div className="background"></div>
           </section>
         </main>
-      </Layout>
+      </layout>
     )
   }
 }
