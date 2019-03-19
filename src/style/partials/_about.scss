@@ -1,0 +1,54 @@
+.aboutPage{
+  header{
+    a,a > .logoSite {
+      color: black;
+    }
+    .burger-item{
+      border: 0px solid white;
+      background-color: white;
+    }
+  }
+  footer{
+    a{
+      color: white;
+    }
+  }
+  main{
+    display: flex;
+    section.left{
+      width: 50%;
+      .content-text{
+        font-size: 70px;
+        text-align: justify;
+        padding: 40px;
+      }
+    }
+    section.right{
+      width:50%;
+      position: relative;
+      .profile{
+        position: absolute;
+        top: 10%;
+        height: 80%;
+        width: 60%;
+        background-color: red;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        >img{
+          height: 100%;
+          transform: rotate(-90deg);
+        }
+      }
+      .background{
+        position: absolute;
+        right: 0;
+        width: 70%;
+        height: 100%;
+        background-color: black;
+        z-index: -10;
+      }
+    }
+  }
+}
