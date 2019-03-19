@@ -21,7 +21,7 @@ class AboutPage extends React.Component {
             <div className="background"></div>
           </section>
         </main>
-      </layout>
+      </Layout>
     )
   }
 }
