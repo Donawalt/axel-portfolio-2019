@@ -22,7 +22,6 @@ render () {
     <Helmet>
       <title>{siteTitle} || Portfolio</title>
     </Helmet>
-    <Loader/>
   <main>
   {posts.map(({ node }) => {
       const title = get(node, 'frontmatter.title') || node.fields.slug
@@ -48,6 +47,7 @@ render () {
       )
     })}
   </main>
+  <Loader/>
   </Layout>
 )
 }
