@@ -1,0 +1,76 @@
+.LoaderConteneur.false{
+  animation: hide 1s;
+  @keyframes hide{
+    0%{
+    opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+  }
+}
+.LoaderConteneur{
+  opacity: 1;
+  transition: 500ms;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 111111111111111111111111;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .LoaderChargement{
+    width: 25vw;
+    height: 4px;
+    margin: auto;
+    background-color: grey;
+    display: flex;
+    justify-content: flex-start;
+    .tracking{
+      width:100%;
+      background-color: white;
+      animation: loader 2s;
+      @keyframes loader {
+        0% {
+          width: 0%;
+        }
+
+        100% {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.LoaderFrame{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .Title{
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 100px;
+    line-height: 84px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    color: #FFFFFF;
+  }
+
+  .SubTitle{
+    font-family: Raleway, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 31px;
+    text-align: center;
+    text-transform: lowercase;
+
+    color: #D3D3D3;
+
+  }
+}

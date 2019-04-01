@@ -21,7 +21,7 @@ render () {
     <title>{siteTitle} || PORTFOLIO</title>
   </Helmet>
   <section className="header-blog">
-    <h1>Portfolio</h1>
+    <h1>Réalisations</h1>
     <h3>by Axel Dos Santos & co ...</h3>
   </section>
   <main>

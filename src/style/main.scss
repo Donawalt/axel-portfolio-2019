@@ -76,6 +76,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
+  font-size: 20px;
   a{
     text-decoration: none;
     font-family: sans-serif;
@@ -92,4 +93,5 @@ footer {
         "partials/portfolioArticle",
         "partials/blogArticle",
         "partials/menu",
-        "partials/about";
+        "partials/about",
+        "partials/loader";

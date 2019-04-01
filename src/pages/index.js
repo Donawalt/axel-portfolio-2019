@@ -1,4 +1,5 @@
 import React from "react"
+import Loader from '../components/loader'
 import Link from 'gatsby-plugin-transition-link'
 import TransitionLink from 'gatsby-plugin-transition-link'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
@@ -21,6 +22,7 @@ render () {
     <Helmet>
       <title>{siteTitle} || Portfolio</title>
     </Helmet>
+    <Loader/>
   <main>
   {posts.map(({ node }) => {
       const title = get(node, 'frontmatter.title') || node.fields.slug

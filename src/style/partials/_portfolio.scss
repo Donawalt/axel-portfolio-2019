@@ -43,6 +43,16 @@
         font-style: normal;
         font-weight: normal;
         font-size: 50px;
+        transition: 1s;
+        &:hover{
+          font-size: 55px;
+          transition: 1s;
+        }
+      }
+      &:hover>.background{
+        height: 195%;
+        width: 195%;
+        transition: 1s;
       }
       .background{
         position: absolute;
@@ -53,6 +63,7 @@
         transform: translate(-25%);
         z-index: -10;
         opacity: 0.8;
+        transition: 1s;
       }
     }
   }
