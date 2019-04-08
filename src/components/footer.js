@@ -5,10 +5,17 @@ class Header extends React.Component {
   render(){
     return (
       <footer>
-        <div class="lang-div">
-          <ul class="lang-list" style={{display: 'none'}}>
-            <li class="lang lang-en active" >EN</li>
-            <li class="lang lang-fr">FR</li>
+        <div class="contact-div">
+          <ul class="contact-list" style={{
+            display: 'flex',
+            color: 'white',
+            listStyleType: 'none',
+            fontFamily: 'sans-serif'
+          }}>
+            <li class="" ><a href="">Mail</a></li>
+            <li class="" style={{
+              marginLeft: '5px'
+            }}><a href="https://www.instagram.com/axe2santos/" target="_blanck">Instagram</a></li>
           </ul>
         </div>
         <div class="all-div">

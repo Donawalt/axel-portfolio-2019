@@ -15,7 +15,6 @@ const Menu = () => (
       <ul>
         <li><AniLink paintDrip to="/portfolio" color="white">RÉALISATIONS</AniLink></li>
         <li><AniLink paintDrip to="/blog" color="white">BLOG</AniLink></li>
-        <li><AniLink paintDrip to="/about" color="white">ABOUT</AniLink></li>
       </ul>
     </div>
   </section>

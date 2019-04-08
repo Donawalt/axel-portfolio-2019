@@ -46,6 +46,14 @@ class PortfolioPostTemplate extends React.Component {
                 <p>{post.frontmatter.role}</p>
               </li>
               <li>
+                <h3 className="intitule">OUTILS:</h3>
+                <p>{post.frontmatter.tools}</p>
+              </li>
+              <li>
+                <h3 className="intitule">LOGICIELS:</h3>
+                <p>{post.frontmatter.software}</p>
+              </li>
+              <li>
                 <h3 className="intitule">CREDIT:</h3>
                 <p>{post.frontmatter.credit}</p>
               </li>
@@ -78,6 +86,8 @@ export const pageQuery = graphql`
         credit
         type
         description
+        tools
+        software
         featuredImage {
             childImageSharp{
                 sizes(maxWidth: 40000) {
