@@ -1,4 +1,5 @@
 import React from 'react'
+import { withPrefix } from 'gatsby'
 
 const LoaderContent = () => (
   <section className="LoaderFrame">
@@ -17,6 +18,7 @@ const LoaderContent = () => (
         <p className="SubTitle">comédien//réalisateur</p>
       </div>
     </span>
+    <img src={withPrefix('/img/loader-background.gif')} alt="Logo" className="LoaderBackground"/>
   </section>
 );
 
@@ -38,7 +40,7 @@ class Loader extends React.Component {
       );
     }
     .bind(this),
-    3000
+    5000
     );
   }
 

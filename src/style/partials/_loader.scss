@@ -30,7 +30,7 @@
     .tracking{
       width:100%;
       background-color: white;
-      animation: loader 2s;
+      animation: loader 3s;
       @keyframes loader {
         0% {
           width: 0%;
@@ -49,6 +49,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   .Title{
     font-family: Raleway, sans-serif;
     font-style: normal;
@@ -72,5 +73,10 @@
 
     color: #D3D3D3;
 
+  }
+  .LoaderBackground{
+    position: absolute;
+    top:0;
+    z-index: -2;
   }
 }
