@@ -46,7 +46,7 @@ class Loader extends React.Component {
 
   render(){
     console.log('this');
-    return <div  className={this.state.onScreen+""+' LoaderConteneur'}>{ this.state.onScreen ? <LoaderContent/> : ''}</div>;
+    return <div  lazy="on" className={this.state.onScreen+""+' LoaderConteneur'}>{ this.state.onScreen ? <LoaderContent/> : ''}</div>;
   }
 }
 
